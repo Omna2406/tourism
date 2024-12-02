@@ -1,7 +1,7 @@
 import mysql.connector# Establish a connection to the database
 cnx = mysql.connector.connect(
     user='root',
-    password='admin',
+    password='Omiee@123',
     host='localhost',
     database='uttarakhand_tourism'
 )
