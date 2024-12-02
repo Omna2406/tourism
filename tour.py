@@ -1,7 +1,7 @@
 import mysql.connector# Establish a connection to the database
 cnx = mysql.connector.connect(
     user='root',
-    password='Omiee@123',
+    password='admin',
     host='localhost',
     database='uttarakhand_tourism'
 )
@@ -60,12 +60,12 @@ except mysql.connector.Error as err:
 
 # Insert data into tables
 query_destinations = """
-    INSERT INTO destinations (destination_name,destination_id,description, location)
-    VALUES ('Mussoorie',1 'A hill station in the foothills of the Himalayas', 'Dehradun district'),
-           ('Nainital',2 'A hill station in the Kumaon foothills of the Himalayas', 'Nainital district'),
-           ('Haridwar', 3'A holy city on the banks of the Ganges River', 'Haridwar district'),
-           ('Rishikesh',4 'A holy city on the banks of the Ganges River', 'Dehradun district'),
-           ('Auli', 5'A ski resort town in the Chamoli district', 'Chamoli district')
+    INSERT INTO destinations (destination_name, description, location)
+    VALUES ('Mussoorie', 'A hill station in the foothills of the Himalayas', 'Dehradun district'),
+           ('Nainital', 'A hill station in the Kumaon foothills of the Himalayas', 'Nainital district'),
+           ('Haridwar', 'A holy city on the banks of the Ganges River', 'Haridwar district'),
+           ('Rishikesh', 'A holy city on the banks of the Ganges River', 'Dehradun district'),
+           ('Auli', 'A ski resort town in the Chamoli district', 'Chamoli district')
 """
 
 try:
@@ -88,7 +88,7 @@ query_hotels = """
 query_restaurants = """
     INSERT INTO restaurants (restaurant_name, destination_id, address, rating)
     VALUES ('Kalsang', 1, 'The Mall, Mussoorie', 4),
-           ('Sakley\'s Restaurant', 2, 'The Mall, Nainital', 4),
+           ('Sakleys Restaurant', 2, 'The Mall, Nainital', 4),
            ('Haveli Hari Ganga', 3, 'Rishikesh Road, Haridwar', 4),
            ('The 60s Cafe', 4, 'Rishikesh Road, Rishikesh', 4),
            ('The Cliff Top Club', 5, 'Auli Road, Joshimath', 5)
